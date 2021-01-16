@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
-    {% if name %}
-        <p>Name is {{ name }}</p>
-    {% else %}
-        <p>Hello the page is empty</p>
-    {% endif %}
+    {% for r in result %}
+        <div>{{ r.name }}</div>
+    {% endfor %}
+    <br />
     <a href="{{ url_for('sign') }}">Sign</a>
 </body>
 </html>
