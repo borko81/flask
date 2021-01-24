@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Weather App</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Cords</th>
+                <th>Temp</th>
+                <th>Wind Speed</th>
+                <th>Sunrise</th>
+                <th>Sunset</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ data.name|upper }}</td>
+                <td>{{ data.coord.lon }}/{{ data.coord.lat }}</td>
+                <td>{{ data.main.temp_max }} &#8451;</td>
+                <td>{{ data.wind.speed }}Km/h</td>
+                <td>{{ data.sys.sunrise }}</td>
+                <td>{{ data.sys.sunset }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
